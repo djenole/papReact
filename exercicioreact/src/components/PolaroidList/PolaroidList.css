@@ -1,0 +1,41 @@
+.polaroid_list {
+    max-width: 250px;
+    background: #fff;
+    display: inline-block;
+    margin: 0 0 27px 30px;
+    padding: 10px 10px 15px;
+    width: auto;
+    text-align: center;
+    font-family: "Marker Felt", sans-serif;
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    box-shadow: 0 3px 16px rgb(156, 147, 147, 0.25);
+    transform: rotate(-3deg);
+    transition: 0.5s;
+
+}
+
+.polaroid_list.right {
+    transform: rotate(3deg);
+}
+
+.polaroid:hover {
+    transition: 0.5s;
+    transform: rotate(0deg);
+    max-width: 325px;
+    margin: 0 0 0 10px;
+}
+
+.polaroid_list img {
+    max-width: 100%;
+       
+}
+
+.polaroid_list:active img {
+    box-shadow: 0 0px 12px rgb(79 220 168);
+    
+}
+.polaroid_list:active{
+    padding-bottom: 20px;
+}
