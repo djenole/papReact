@@ -9,10 +9,10 @@ state é a forma de controlar as varáveis em nossos componentes, podemos usar a
 E também podemos usar os eventos do DOM, usando o seguinte formato :
 
 <!--ts--> 
-   * [onNomeDoEventoEmCamCase](#como-usar)
-      * [onClick](#pre-requisitos)
-      * [onChange](#local-files)
-      * [onMouseOver](#remote-files)
+   * [onNomeDoEventoEmCamCase](#EventosDom)
+      * [onClick](#EventoDom)
+      * [onChange](#EventoDom)
+      * [onMouseOver](#EventoDom)
      
 <!--te-->
 
