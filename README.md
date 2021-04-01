@@ -24,6 +24,7 @@ Para saber mais sobre DOM events veja a documentação da Mozilla.
 A estenção do arquivo deve ser .jsx
 *Nota:* JSX é uma sintaxe que permite misturar HTML e JavaScript em um arquivo.
 exemplo: 
+
 	```const element = <h1>Hello, world!</h1>;```
 
 * No JSX class é uma palavra reservada devido ao ES6, para usarmos o atributo class do HTML, devemos usar className.
