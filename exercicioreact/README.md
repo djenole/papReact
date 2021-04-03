@@ -3,12 +3,19 @@
 O objetivo é a demonstração do uso do hooks para a criação de componentes.
 
 ### State & useState
+
 state é a forma de controlar as varáveis em nossos componentes, podemos usar através da classe base component, ou através de hooks com o useState. Podendo fazer o bind destas variáveis com os elementos HTML.
-E também podemos usar os eventos do DOM, usando o seguinte formato:
-* onNomeDoEventoEmCamCase
-    * onClick
-    * onChange
-    * onMouseOver
+
+E também podemos usar os eventos do DOM, usando o seguinte formato :
+
+<!--ts--> 
+   * [onNomeDoEventoEmCamCase](#EventosDom)
+      * [onClick](#EventoDom)
+      * [onChange](#EventoDom)
+      * [onMouseOver](#EventoDom)
+     
+<!--te-->
+
 
 Para saber mais sobre DOM events veja a documentação da Mozilla.
 
@@ -17,12 +24,13 @@ Para saber mais sobre DOM events veja a documentação da Mozilla.
 A estenção do arquivo deve ser .jsx
 *Nota:* JSX é uma sintaxe que permite misturar HTML e JavaScript em um arquivo.
 exemplo: 
-* const element = <h1>Hello, world!</h1>;
+
+	```const element = <h1>Hello, world!</h1>;```
 
 * No JSX class é uma palavra reservada devido ao ES6, para usarmos o atributo class do HTML, devemos usar className.
 * Use sempre camelCase para atributos do HTML(tabIndex).
 
-* Nota2:* Sempre coloquem o exports default <nome do componente>, no final do arquivo para simplificar a importação. também é possível fazer direto na declaração.
+*Nota2:* Sempre coloquem o exports default <nome do componente>, no final do arquivo para simplificar a importação. também é possível fazer direto na declaração.
 
 # Passo a Passo
 1. Dentro da pasta src, crie uma pasta chamada components.
@@ -45,12 +53,7 @@ Ainda sobre funções, é possível declarar uma função através de arros func
 2. Altere o arquivo Title.jsx.
 3. Altere o arquivo App.js para usar os 2 componentes.
 
-# Desafio
-Crie um componente Photo que receba como parâmetro a url da img
-### Resolução do desafio
-1. render() retorna a url da imagem.
-2. render() retorna o arquivo de caminho ./src/img.
-
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # Polaroid
 Agora a ideia é criar um componente Polaroid, mostrando algumas possibilidades do React, como o uso de CSS, e apresentando uma sugestão de formato para organização dos arquivos de um componente.
@@ -91,3 +94,42 @@ Também podemos renderizar múltiplos componentes, com base em um array.
     * Crie o arquivo index.js
 3. Edite o arquivo App.js para usar o novo componente.
 
+
+# 03 Consumindo e compartilhando dados.
+O react nos fornece outras formas de compartilhar os dados entre componentes, além das propps podemos usar o context, criamos um "contexto" aonde todos os componentes que estão dentro desse "contexto" tem acesso aos dados compartilhados.
+
+### Passo 1 - AJAX
+O ReactJS, por ser uma lib de UI, não tem uma solução própria para requisições AJAX(ou Client HTTP). Desta forma podemos escolher o que vamos utilizar, em muitos projetos o Axios é usado, mas aqui vamos utilizar o Fetch API, que é uma API nativa do Browser.
+Vamos usar a [PokeAPI](https://pokeapi.co).
+
+*Nota:* <></> é o fragment, usado quando for preciso ter um elemento pai devido ao JSX, mas sem a necessidade de ter um elemento renderizado.
+
+1. Dentro da pasta src/components, crie a pasta PokemonSeach.
+2. Dentro da pasta src/components/PokemonSearch.
+    * crie o arquivo PokemonSearch.jsx
+    * Crie o arquivo index.js
+3. Edite o arquivo App.js, para usar o novo componente.
+
+
+### Passo a Passo 2
+Agora vamos mudar um pouco, para adicionarmos um filtro de pesquisa.
+1. Dentro da pasta src/components/PokemonSearch
+    * Edite o arquivo PokemonSearch.jsx
+
+## Context
+Vamos criar agora o context para compartilhar as informações entre os componentes internos. para usar o context.
+    * Criar o contexto com React.createContext(em um arquivo separado)
+    * User o <MeuContexto>.Provider, no elemento principal que irá definir os dados.
+    * User o hook useContext em que for utilizar os dados.
+        * Só funciona nos elementos filhos.
+        * Exite uma forma sem usar hooks
+
+### Passo a Passo 3
+1. Dentro da pasta src/components/PokemonSearch, crie o arquivo PokemonSearchContext.js
+2. Crie a pasta src/components/PokemonList.
+3. Dentro da pasta src/components/PokemonList, crie o arquivo PokemonList.jsx.
+4. Dentro da pasta src/components/PokemonList, crie o arquivo index.js.
+5. Dentro da pasta src/components/PokemonSearch, crie o arquivo PokemonBadge.css.
+6. Dentro da pasta src/components/PokemonSearch, crie o arquivo PokemonBadge.jsx.
+7. Dentro da pasta src/components/PokemonSearch, crie o arquivo PokemonSearch.css
+8. Dentro da pasta src/components/pokemonSearch, edite o arquivo PokemonSearch.jsx
