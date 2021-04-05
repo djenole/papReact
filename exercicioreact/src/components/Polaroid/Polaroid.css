@@ -7,6 +7,7 @@
     padding: 10px 10px 15px;
     text-align: center;
     font-family: "Marker Felt", sans-serif;
+    text-decoration: none;
     color: #333;
     font-size: 18px;
     box-shadow: 0 3px 6px rgb(156, 147, 147, 0.25);
@@ -29,5 +30,7 @@
     max-width: 100%;
 }
 
-
+.polaroid:active img {
+    box-shadow: 0 0px 12px rgb(79 220 168)
+}
 

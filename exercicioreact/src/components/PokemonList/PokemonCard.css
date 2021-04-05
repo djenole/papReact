@@ -1,0 +1,8 @@
+.pokemon_card .polaroid img {
+    border: #333 1px solid;
+    
+}
+
+.pokemon_card {
+    display: inline-block;
+}

@@ -36,3 +36,23 @@
     transform: rotate(360deg);
   }
 }
+
+.App nav ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-aroung;
+  background-color: #d2d9e6;  
+}
+
+.App nav ul li {
+  margin: 0;
+}
+
+.App nav ul li a {
+  padding: 8px;
+}
+
+.App nav ul a.active {
+  border: 1px solid black;
+}

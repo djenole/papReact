@@ -14,7 +14,7 @@ E também podemos usar os eventos do DOM, usando o seguinte formato :
       * [onChange](#EventoDom)
       * [onMouseOver](#EventoDom)
      
-<!--te-->
+<!--ts-->
 
 
 Para saber mais sobre DOM events veja a documentação da Mozilla.
@@ -32,7 +32,7 @@ exemplo:
 
 *Nota2:* Sempre coloquem o exports default <nome do componente>, no final do arquivo para simplificar a importação. também é possível fazer direto na declaração.
 
-# Passo a Passo
+## Passo a Passo
 1. Dentro da pasta src, crie uma pasta chamada components.
 2. Crie um arquivo chamado Ttile.jsx
 3. Altere o arquivo App.js:
@@ -54,6 +54,7 @@ Ainda sobre funções, é possível declarar uma função através de arros func
 3. Altere o arquivo App.js para usar os 2 componentes.
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 # Polaroid
 Agora a ideia é criar um componente Polaroid, mostrando algumas possibilidades do React, como o uso de CSS, e apresentando uma sugestão de formato para organização dos arquivos de um componente.

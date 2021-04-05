@@ -1,43 +1,65 @@
-  
-import React from 'react';
-import './App.css';
-import PolaroidList from './components/PolaroidList';
+   
+import React from "react";
+import "./App.css";
+
+import HomePage from "./pages/HomePage";
+import TitlesPage from "./pages/TitlesPage";
+import PolaroidPage from "./pages/PolaroidPage";
+import PokemonPage from "./pages/PokemonPage";
+import PokemonCardPage from "./pages/PokemonCardPage";
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  NavLink,
+} from "react-router-dom";
 
 function App() {
-
-  //aqui está o resultado da função que é executada ao clicar no objeto
-  function moveMove() {
-    console.log("I like to move it, move it!");
-    console.log("⊂(▀¯▀⊂)⊂(▀¯▀⊂)");
-  }
-
-  //uma lista de objetos que pode conter texto, links, receber funções...
-  let polaroidList = [
-    {
-      url: "https://www.tenhomaisdiscosqueamigos.com/wp-content/uploads/2020/05/hey-ya.jpg",
-      text: "Imagem Polaroid",
-      shakeIt: moveMove,
-    },
-    {
-      url: "https://ichef.bbci.co.uk/news/800/cpsprodpb/64DB/production/_110891852_pia23645_hires.jpg",
-      text: "Um pálido ponto azul no vasto infinito",
-    },
-    {
-      url: "https://i.pinimg.com/564x/b0/01/df/b001df0e67c68bb6474c6ee402a3dace.jpg",
-      text: "Não é a mamãe!",
-      shakeIt: moveMove,
-    },
-  ];
-
-//tudo ok? então nesse momento vai preparar toda a informação que foi passada.
   return (
-    <div className="App">
-      <header className="App-header">
-        <PolaroidList list={polaroidList} />
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <nav>
+          <ul>
+            <li>
+              <NavLink to="/" exact>Home</NavLink>
+            </li>
+            <li>
+              <NavLink to="/titles">Titles</NavLink>
+            </li>
+            <li>
+              <NavLink to="/Polaroid">Polaroid</NavLink>
+            </li>
+            <li>
+              <NavLink to="/pokemon">Pokémon</NavLink>
+            </li>
+          </ul>
+        </nav>
+        <header className="App-header">
+          <Switch>
+            <Route path="/pokemon/:id">
+              <PokemonCardPage />
+            </Route>
+            <Route path="/pokemon">
+              <PokemonPage />
+            </Route>
+            <Route path="/polaroid">
+              <PolaroidPage />
+            </Route>
+            <Route path="/titles">
+              <TitlesPage />
+            </Route>
+            <Route path="/">
+              <HomePage />
+            </Route>
+          </Switch>
+        </header>
+      </div>
+    </Router>
   );
+
+
 }
 
-//então será possível enviar.
+
 export default App;
