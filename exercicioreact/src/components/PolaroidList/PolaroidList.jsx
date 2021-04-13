@@ -1,6 +1,6 @@
 import React from "react";
 import Polaroid from "../Polaroid";
-import "./PolaroidList.css";
+//import "./PolaroidList.css";
 
 /**
  * @param {[]} List - Polaroid Array of {url: string, text: string, shakeIt: function}

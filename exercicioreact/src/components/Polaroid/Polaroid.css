@@ -10,7 +10,7 @@
     text-decoration: none;
     color: #333;
     font-size: 18px;
-    box-shadow: 0 3px 6px rgb(156, 147, 147, 0.25);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .25);
     transform: rotate(-3deg);
     transition: 0.5s;
 }
@@ -19,7 +19,7 @@
     transform: rotate(3deg);
 }
 
-.polareid:hover {
+.polaroid:hover {
     transition: 0.5s;
     transform: rotate(0deg);
     max-width: 325px;
@@ -30,7 +30,6 @@
     max-width: 100%;
 }
 
-.polaroid:active img {
-    box-shadow: 0 0px 12px rgb(79 220 168)
+.polaroid:active img  {
+    box-shadow: 0 0px 12px rgb(79 220 168);
 }
-

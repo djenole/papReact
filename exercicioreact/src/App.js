@@ -9,7 +9,7 @@ import PokemonPage from "./pages/PokemonPage";
 import PokemonCardPage from "./pages/PokemonCardPage";
 
 import {
-  BrowserRouter as Router,
+  BrowserRouter,
   Switch,
   Route,
   NavLink,
@@ -17,7 +17,7 @@ import {
 
 function App() {
   return (
-    <Router>
+    <BrowserRouter>
       <div className="App">
         <nav>
           <ul>
@@ -55,7 +55,7 @@ function App() {
           </Switch>
         </header>
       </div>
-    </Router>
+    </BrowserRouter>
   );
 
 
